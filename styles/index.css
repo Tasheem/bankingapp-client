@@ -1,0 +1,25 @@
+#container {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+#transactions {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px auto;
+    text-decoration: none;
+    list-style: none;
+}
+
+.tran-buttons {
+    background-color: rgb(15, 130, 224);
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+.tran-links {
+    text-decoration: none;
+    color: white;
+}

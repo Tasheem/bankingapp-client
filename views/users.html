@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/abstract-arrow-with-pages-5603ld.png" />
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Get Users</title>
+</head>
+<body>
+    <div id="render-navbar"></div>
+    <br>
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" class="btn btn-success btn-block" 
+                id="get-users">Get Users</button>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">ID</th>
+                <th scope="col">Date of Account Creation</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email Address</th>
+                <th scope="col">Username</th>
+                <th scope="col">Password</th>
+                <th scope="col">Birthday</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Preferred Pronoun</th>
+                <th scope="col">Role</th>
+            </tr>
+        </thead>
+        <tbody id='tbody'>
+        </tbody>
+    </table>
+
+    <script src="/scripts/render-navbar.js" id="nav-script"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="module" src="/scripts/users.js"></script>
+</body>
+</html>

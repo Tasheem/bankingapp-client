@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/abstract-arrow-with-pages-5603ld.png" />
+    <!-- Custom navbar -->
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Change Name</title>
+</head>
+<body>
+    <div id="render-navbar"></div>
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+            <h1>Update Name</h1>
+            <h3 id="feedback"></h3>
+            <form class="form" id="update-form">
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="fname" class="form-label">First Name:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" class="form-control" id="fname" 
+                            placeholder="First">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="lname" class="form-label">Last Name:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" class="form-control" id="lname" 
+                            placeholder="Last">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="button" class="btn btn-success btn-block" id="button-sub">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+    
+    <script src="/scripts/render-navbar.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="module" src="/scripts/update-user/name.js"></script>
+</body>
+</html>

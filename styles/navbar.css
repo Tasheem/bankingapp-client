@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    padding:0%;
+    margin: 0%;
+}
+
+#navigation {
+    background-color: #24252A;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 5%;
+}
+
+#logo {
+    margin-right: 5%;
+    max-width: 100%;
+    height: 100px;
+    cursor:pointer;
+}
+
+.li-elms, .links, .contact-button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    margin-left: 20%;
+}
+
+.nav__links .li-elms {
+    padding: 0px 20px;
+    max-width: 100%;
+}
+
+.nav__links .li-elms .links {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links .li-elms .links:hover {
+    color:#0088a9;
+}
+
+#registration {
+    display: flex;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Greeting {
+    color: rgba(255, 255, 255, 0.781);
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.sign-in-button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    color:rgba(255, 255, 255, 255);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.sign-in-button:hover {
+    background-color: rgba(0,136,169,0.8);
+    color:rgba(4, 33, 194, 0.753);
+}
+
+.sign-out-button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    width: 100px;
+}
+
+.sign-out-button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+.accountOperations {
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.781);
+    padding-right: 15px;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/abstract-arrow-with-pages-5603ld.png" />
+    <!-- Custom navbar -->
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Admin - User Creation</title>
+</head>
+<body>
+    <div id="render-navbar"></div>
+    
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+            <h1>Admin</h1>
+            <h3 style="color: gray;">Create User</h3><br>
+            <p id="feedback"></p>
+            <form class="form" id="signup-form">
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="fname" class="form-label">First Name:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" class="form-control" id="fname" 
+                            placeholder="First">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="lname" class="form-label">Last Name:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" class="form-control" id="lname" 
+                            placeholder="Last">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="email" class="form-label">Email:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="email" class="form-control" id="email"
+                             aria-describedby="emailHelp" placeholder="Enter email">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="username" class="form-label">Username:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" class="form-control" id="username" 
+                            placeholder="Username">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="password" class="form-label">Password:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="bday" class="form-label">Birthday:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="date" class="form-control" id="bday"
+                            name="bday">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="role" class="form-label">Role:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" class="form-control" id="role" placeholder="Role Name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row" id='radios'>
+                        <div class="col-2">
+                            <label for="gender" class="form-label">Gender:</label>
+                        </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-outline-secondary" id="btn-female">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-female"
+                                    value="Female">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      Female
+                                    </label>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-4">
+                            <button type="button" class="btn btn-outline-secondary" id="btn-male">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-male"
+                                    value="Male">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      Male
+                                    </label>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-2">
+                            <button type="button" class="btn btn-outline-secondary" id="btn-custom">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio-custom"
+                                    value="Custom">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                      Custom
+                                    </label>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div><br>
+                
+                <div id="error-message"></div>
+                <div id="pronoun-dropdown"></div>
+                <div id="breaks"></div>
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="button" class="btn btn-success btn-block" id="button-sub">Create</button>
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <script src="/scripts/render-navbar.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="module" src="/scripts/admin/createUser.js"></script>
+</body>
+</html>
